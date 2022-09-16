@@ -24,6 +24,10 @@
     }
   }
 
+  &__links {
+    width: 615px;
+  }
+
   &__list {
     display: flex;
   }
@@ -41,7 +45,9 @@
     }
 
     &-icon {
-      background-color: grey;
+      // background-color: grey;
+      background-image: url('../../assets/images/user.png');
+      background-size: 100%;
       height: 2.25rem;
       width: 2.25rem;
       border-radius: 50%;
