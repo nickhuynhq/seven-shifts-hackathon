@@ -2,6 +2,7 @@ import React from 'react'
 import "./CalendarModal.scss"
 import ProfilePic from "../../assets/images/profile.png"
 import { useState } from 'react'
+import ConfirmModal from "../ConfirmModal/ConfirmModal"
 
 const CalendarModal = () => {
 
@@ -16,7 +17,9 @@ const CalendarModal = () => {
   }
 
   return (
-    <div className="calendar-modal-main">
+    <>
+    {confirmationModal && <ConfirmModal setConfirmationModal={setConfirmationModal}/>}
+     <div className="calendar-modal-main">
       <div className="calendar-modal">
         <section className="calendar-modal__employee-card">
           <img className="employee-card__image" src={ProfilePic} alt="employee image"/>
@@ -154,6 +157,8 @@ const CalendarModal = () => {
     <div className='background-blur'></div>
 
     </div>
+    </>
+   
     
   )
 }

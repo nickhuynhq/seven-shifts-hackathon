@@ -3,8 +3,11 @@ import confirm from '../../assets/images/confirm.gif'
 import profileIcon from '../../assets/icons/png/profile_icon.png'
 import timeIcon from '../../assets/icons/png/time_icon.png'
 import noteIcon from '../../assets/icons/png/note_icon.png'
+import {useNavigate} from 'react-router-dom'
 
-function ConfirmModal() {
+function ConfirmModal({setConfirmationModal}) {
+
+  const navigate = useNavigate();
   return (
     <div className='confirm-modal'>
       <div className='confirm-modal__overlay'></div>
@@ -33,8 +36,8 @@ function ConfirmModal() {
             </div>
           </div>
         </div>
-        <div className='confirm-modal__confirm'>Confirm Session</div>
-        <div className='confirm-modal__cancel'>Cancel</div>
+        <div className='confirm-modal__confirm' onClick={()=>{navigate('/')}}>Confirm Session</div>
+        <div className='confirm-modal__cancel' onClick={()=>{setConfirmationModal(false)}}>Cancel</div>
       </section>
     </div>
   )
