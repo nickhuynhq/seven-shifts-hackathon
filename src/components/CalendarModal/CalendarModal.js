@@ -76,7 +76,7 @@ const CalendarModal = () => {
                 <div className="calendar__heading-block">Sun</div>
               </div>
               <div className="calendar__body-blocks">
-                <div className={calendarBlock ? "calendar__body-block--active" : "calendar__body-block--active--clicked"} onClick={handleCalendarClick}></div>
+                <div className={calendarBlock ? "calendar__body-block--active--clicked" : "calendar__body-block--active"} onClick={handleCalendarClick}></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block--active"></div>
