@@ -12,14 +12,20 @@ h1,h2,h3,p {
     width: 50%;
     padding: 1rem;
     font-family: $font-stack;
+    background-color: white;
 
     &__employee-card{
         display: flex;
+        border-bottom: 1px solid grey;
+    }
+    &__calendar{
+        margin-top: 1rem;
     }
 }
 .employee-card{
 
     &__image{
+        margin-top: 1rem;
         width: 6rem;
         height: 6rem;
     }
@@ -43,6 +49,7 @@ h1,h2,h3,p {
         height: 1rem;
         margin-right: 0.5rem;
         padding: 0.8rem 0.5rem;
+        color: white;
         background-color: $color_tangerine;
         border-radius: 4px;
 
@@ -52,11 +59,13 @@ h1,h2,h3,p {
         }
     }
     &__description{
+        font-size: 12px;
+        margin-bottom: 1rem;
     }
 }
 
 .calendar-modal__button{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     background-color: $color_eggplant;
     color: $color_white;
     border: none;
@@ -71,6 +80,11 @@ h1,h2,h3,p {
 
 .calendar{
     display: flex;
+    margin-top: 1rem;
+
+    &__title{
+        font-weight: 400;
+    }
 
     &__times-block{
         display: flex;
@@ -96,18 +110,17 @@ h1,h2,h3,p {
         &-block{
             @extend .calendar__times-block;
             background-color: white;
-            width: 5rem;
+            width: 4.5rem;
             border-right: 1px dotted grey;
             border-bottom: 1px dotted grey;
 
             &--active{
                 @extend .calendar__times-block;
-                width: 5rem;
+                width: 4.5rem
+;
                 background-color: #FDB9A3; 
             }
         }
-
-
     }
 
     &__heading{
@@ -115,7 +128,9 @@ h1,h2,h3,p {
 
         &-block{
             @extend .calendar__times-block;
-            width: 5rem;
+            width: 4.5rem;
+            justify-content: flex-start;
+            padding: 0.5rem;
             color: $color_dark_grey;
             background-color: rgb(215, 215, 215);
         }
