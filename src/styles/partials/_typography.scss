@@ -1,28 +1,46 @@
-$font-stack-1: 'Avenir';
+@use './colors.scss' as *;
+
+$font-stack: 'Avenir';
 
 // Light
 @font-face {
   font-family: $font-stack;
-  src: url(../../assets/fonts/Avenir-Roman.woff2) format("woff2"),
-    url(../../assets/fonts/Avenir-Roman.woff) format("woff"),
-    url(../../assets/fonts/Avenir-Roman.ttf) format("truetype");
+  src: url(../../assets/fonts/avenir/Avenir-Roman.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Roman.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Roman.ttf) format("truetype");
   font-weight: 300;
 }
 
 // Normal
 @font-face {
   font-family: $font-stack;
-  src: url(../../assets/fonts/Avenir-Medium.woff2) format("woff2"),
-    url(../../assets/fonts/Avenir-Medium.woff) format("woff"),
-    url(../../assets/fonts/Avenir-Medium.ttf) format("truetype");
+  src: url(../../assets/fonts/avenir/Avenir-Medium.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Medium.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Medium.ttf) format("truetype");
   font-weight: 400;
 }
 
 // Heavy
 @font-face {
   font-family: $font-stack;
-  src: url(../../assets/fonts/Avenir-Heavy.woff2) format("woff2"),
-    url(../../assets/fonts/Avenir-Heavy.woff) format("woff"),
-    url(../../assets/fonts/Avenir-Heavy.ttf) format("truetype");
+  src: url(../../assets/fonts/avenir/Avenir-Heavy.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Heavy.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Heavy.ttf) format("truetype");
   font-weight: 700;
+}
+
+.test1 {
+  font-family: $font-stack;
+  font-weight: 300;
+  color: $color_tangerine;
+}
+.test2 {
+  font-family: $font-stack;
+  font-weight: 400;
+  color: $color_eggplant;
+}
+.test3 {
+  font-family: $font-stack;
+  font-weight: 700;
+  color: $color_dark_grey;
 }
