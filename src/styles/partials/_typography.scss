@@ -29,31 +29,16 @@ $font-stack: 'Avenir';
   font-weight: 700;
 }
 
-.test1 {
-  font-family: $font-stack;
-  font-weight: 300;
-  color: $color_tangerine;
-}
-.test2 {
-  font-family: $font-stack;
-  font-weight: 400;
-  color: $color_eggplant;
-}
-.test3 {
-  font-family: $font-stack;
-  font-weight: 700;
-  color: $color_dark_grey;
-}
-
 .p1 {
   font-family: $font-stack;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 14px;
   color: $color_dark_grey;
 }
 .p2 {
   font-family: $font-stack;
   font-weight: 400;
+  font-size: 13px;
   color: $color_dark_grey;
 }
 

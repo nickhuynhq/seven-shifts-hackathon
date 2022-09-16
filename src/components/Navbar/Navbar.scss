@@ -42,16 +42,20 @@
 
     &-icon {
       background-color: grey;
-      height: 2rem;
-      width: 2rem;
+      height: 2.25rem;
+      width: 2.25rem;
       border-radius: 50%;
-      margin-left: 1rem;
+      margin: 0 1rem;
     }
+  }
+
+  &__seven-shifts-logo {
+    width: 100px;
   }
 }
 
 a.active {
-  padding-bottom: 1.2rem;
+  padding-bottom: 1.3rem;
   border-bottom: 4px solid;
   color: $color_tangerine;
 }
