@@ -6,8 +6,11 @@ import employee3 from '../../assets/images/employee3.png';
 import employee4 from '../../assets/images/employee4.png';
 import employee5 from '../../assets/images/employee5.png';
 import downArrow from '../../assets/icons/png/vector.png';
+import { useNavigate } from 'react-router-dom'
 
 function DashboardPage() {
+
+  const navigate = useNavigate()
 
   const staffList = [
     {
@@ -42,7 +45,9 @@ function DashboardPage() {
     },
   ]
 
-  console.log()
+  const handleClick = () => {
+    navigate('/skillbuilding')
+  }
 
   return (
     <>
@@ -75,7 +80,7 @@ function DashboardPage() {
                     </div>
                     <div className='cards__description'>{staff.request_description}</div>
                   </div>
-                  <div className='cards__button btn'>Show Request</div>
+                  <div className='cards__button btn' onClick={handleClick}>Show Request</div>
                 </div>
               )
             })}
