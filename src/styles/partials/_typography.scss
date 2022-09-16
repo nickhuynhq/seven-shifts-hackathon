@@ -29,6 +29,13 @@ $font-stack: 'Avenir';
   font-weight: 700;
 }
 
+h1 {
+  font-family: $font-stack;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color_dark_grey;
+}
+
 .p1 {
   font-family: $font-stack;
   font-weight: 400;
