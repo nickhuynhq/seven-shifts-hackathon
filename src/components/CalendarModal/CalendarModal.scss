@@ -1,0 +1,138 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/typography' as *;
+
+h1,h2,h3,p {
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-modal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1rem;
+    font-family: $font-stack;
+    background-color: white;
+
+    &__employee-card{
+        display: flex;
+        border-bottom: 1px solid grey;
+    }
+    &__calendar{
+        margin-top: 1rem;
+    }
+}
+.employee-card{
+
+    &__image{
+        margin-top: 1rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    &__details{
+        padding: 1rem;
+    }
+    &__details-middle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__level-list{
+        display: flex;
+    }
+    &__level{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.8rem 0.5rem;
+        color: white;
+        background-color: $color_tangerine;
+        border-radius: 4px;
+
+        &--invalid{
+            @extend .employee-card__level;
+            background-color: rgb(181, 181, 181);
+        }
+    }
+    &__description{
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+}
+
+.calendar-modal__button{
+    margin-left: 0.5rem;
+    background-color: $color_eggplant;
+    color: $color_white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+
+    &--inactive{
+       @extend .calendar-modal__button;
+       opacity: 50%; 
+    }
+}
+
+.calendar{
+    display: flex;
+    margin-top: 1rem;
+
+    &__title{
+        font-weight: 400;
+    }
+
+    &__times-block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3.5rem;
+        color: white;
+        border: 1px solid white;
+        background-color: $color_eggplant;
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+
+        &-blocks{
+            display: flex;
+            flex-direction: row;
+        }
+
+        &-block{
+            @extend .calendar__times-block;
+            background-color: white;
+            width: 4.5rem;
+            border-right: 1px dotted grey;
+            border-bottom: 1px dotted grey;
+
+            &--active{
+                @extend .calendar__times-block;
+                width: 4.5rem
+;
+                background-color: #FDB9A3; 
+            }
+        }
+    }
+
+    &__heading{
+        display: flex;
+
+        &-block{
+            @extend .calendar__times-block;
+            width: 4.5rem;
+            justify-content: flex-start;
+            padding: 0.5rem;
+            color: $color_dark_grey;
+            background-color: rgb(215, 215, 215);
+        }
+    }
+}
