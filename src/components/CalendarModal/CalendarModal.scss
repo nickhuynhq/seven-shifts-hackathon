@@ -37,7 +37,13 @@ h1,h2,h3,p {
     }
     &__calendar{
         margin-top: 1rem;
+
+        &-top{
+            display: flex;
+            justify-content: space-between;
+        }
     }
+
 }
 .employee-card{
 
@@ -148,7 +154,11 @@ h1,h2,h3,p {
                 &:hover{
                     background-color: $color_tangerine;
                 }
-    
+
+                &--clicked{
+                    @extend .calendar__body-block--active;
+                    background-color: $color_tangerine;
+                }
             }
         }
     }

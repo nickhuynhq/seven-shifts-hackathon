@@ -8,11 +8,15 @@ const CalendarModal = () => {
 
   const [isApproved, setIsApproved] = useState(false)
   const [confirmationModal, setConfirmationModal] = useState(false)
+  const [calendarBlock, setCalendarBlock] = useState(false)
 
   const handleApproveButton = () => {
     setIsApproved(true);
   }
   const handleCalendarClick = () =>{
+    setCalendarBlock(true);
+  }
+  const handleCalendarConfirm = () => {
     setConfirmationModal(true);
   }
 
@@ -34,7 +38,7 @@ const CalendarModal = () => {
                   <div className="employee-card__level--invalid">  </div>
                 </div>
                 <div>
-                  <button className="calendar-modal__button" onClick={handleApproveButton}>Approve</button>
+                  <button className={isApproved ? "calendar-modal__button--inactive" : "calendar-modal__button"} onClick={handleApproveButton}>{isApproved ? "Approved": "Approve"}</button>
                   <button className="calendar-modal__button--inactive">Pending Request</button>
                 </div>    
               </div>
@@ -43,7 +47,11 @@ const CalendarModal = () => {
           </div>
         </section>
         <section className="calendar-modal__calendar">
-          <h2 className="calendar__title">Requested Time</h2>
+          <div className="calendar-modal__calendar-top">
+            <h2 className="calendar__title">Requested Time</h2>
+            <button className={calendarBlock ? "calendar-modal__button" : "calendar-modal__button--inactive"} onClick={handleCalendarConfirm}>Confirm Time</button>
+          </div>
+          
           <div className={isApproved ? "calendar" : "calendar--inactive"}>
             <div className="calendar__times">
               <div className="calendar__times-block"></div>
@@ -68,19 +76,10 @@ const CalendarModal = () => {
                 <div className="calendar__heading-block">Sun</div>
               </div>
               <div className="calendar__body-blocks">
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
+                <div className={calendarBlock ? "calendar__body-block--active" : "calendar__body-block--active--clicked"} onClick={handleCalendarClick}></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
-                <div className="calendar__body-block"></div>
-                <div className="calendar__body-block"></div>
-                <div className="calendar__body-block"></div>
-              </div>
-              <div className="calendar__body-blocks">
-                <div className="calendar__body-block"></div>
-                <div className="calendar__body-block"></div>
-                <div className="calendar__body-block"></div>
-                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block--active"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
@@ -95,10 +94,19 @@ const CalendarModal = () => {
                 <div className="calendar__body-block"></div>
               </div>
               <div className="calendar__body-blocks">
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block"></div>
+              </div>
+              <div className="calendar__body-blocks">
+                <div className="calendar__body-block--active"></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block"></div>
+                <div className="calendar__body-block--active"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
@@ -134,14 +142,14 @@ const CalendarModal = () => {
                 
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
+                <div className="calendar__body-block--active"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
+                <div className="calendar__body-block--active"></div>
                 <div className="calendar__body-block"></div>
               </div>
               <div className="calendar__body-blocks">
-                <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
+                <div className="calendar__body-block--active"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block"></div>
                 <div className="calendar__body-block--active" onClick={handleCalendarClick}></div>
