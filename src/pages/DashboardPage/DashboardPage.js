@@ -6,9 +6,13 @@ import employee3 from '../../assets/images/employee3.png';
 import employee4 from '../../assets/images/employee4.png';
 import employee5 from '../../assets/images/employee5.png';
 import downArrow from '../../assets/icons/png/vector.png';
+import { useState} from 'react';
 import { useNavigate } from 'react-router-dom'
+import CalendarModal from '../../components/CalendarModal/CalendarModal';
 
 function DashboardPage() {
+
+  const [modalActive, setModalActive] = useState(false);
 
   const navigate = useNavigate()
 
@@ -46,11 +50,13 @@ function DashboardPage() {
   ]
 
   const handleClick = () => {
-    navigate('/skillbuilding')
+    setModalActive(true);
+    // navigate('/skillbuilding')
   }
 
   return (
     <>
+    {modalActive && <CalendarModal />}
       <section className='dashboard'>
         <div className='dashboard__container'>
           <h1 className='dashboard__header h1'>Dashboard</h1>
