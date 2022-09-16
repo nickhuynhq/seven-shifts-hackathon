@@ -1,0 +1,57 @@
+@use '../../styles/partials/colors' as *;
+
+.navbar {
+  border-bottom: 1px solid;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__restaurant {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+
+    &-logo {
+      height: 2rem;
+    }
+
+    &-name {
+      margin-left: .5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__items {
+    margin: 0 1rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    &-options {
+      margin: 0 1rem;
+    }
+
+    &-icon {
+      background-color: grey;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      margin-left: 1rem;
+    }
+  }
+}
+
+a.active {
+  padding-bottom: 1.2rem;
+  border-bottom: 4px solid;
+  color: $color_tangerine;
+}
