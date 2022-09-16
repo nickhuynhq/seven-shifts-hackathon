@@ -15,8 +15,8 @@ const CalendarModal = () => {
                 <div className="employee-card__level-list">
                   <div className="employee-card__level"> 1 </div>
                   <div className="employee-card__level"> 2 </div>
-                  <div className="employee-card__level--invalid"> 3 </div>
-                  <div className="employee-card__level--invalid"> 4 </div>
+                  <div className="employee-card__level--invalid">  </div>
+                  <div className="employee-card__level--invalid">  </div>
                 </div>
                 <div>
                   <button className="calendar-modal__button">Approve</button>
