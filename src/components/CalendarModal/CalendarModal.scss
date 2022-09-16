@@ -1,0 +1,118 @@
+@use '../../styles/partials/colors' as *;
+
+h1,h2,h3,p {
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-modal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1rem;
+
+    &__employee-card{
+        display: flex;
+    }
+}
+.employee-card{
+
+    &__image{
+        width: 6rem;
+        height: 6rem;
+    }
+    &__details{
+        padding: 1rem;
+    }
+    &__details-middle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__level-list{
+        display: flex;
+    }
+    &__level{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        padding: 0.8rem 0.5rem;
+        background-color: $color_tangerine;
+        border-radius: 4px;
+        &--invalid{
+            @extend .employee-card__level;
+            background-color: grey;
+        }
+    }
+    &__description{
+        width: 75%;
+    }
+}
+
+.calendar-modal__button{
+    margin-left: 1rem;
+    background-color: $color_eggplant;
+    color: $color_white;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+
+    &--inactive{
+       @extend .calendar-modal__button;
+       opacity: 50%; 
+    }
+}
+
+.calendar{
+    display: flex;
+
+    &__times-block{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 5rem;
+        color: white;
+        border: 1px solid white;
+        background-color: $color_eggplant;
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+
+        &-blocks{
+            display: flex;
+            flex-direction: row;
+        }
+
+        &-block{
+            @extend .calendar__times-block;
+            background-color: white;
+            border-right: 1px dotted grey;
+            border-bottom: 1px dotted grey;
+
+            &--active{
+                @extend .calendar__times-block;
+                background-color: #FDB9A3; 
+            }
+        }
+
+
+    }
+
+    &__heading{
+        display: flex;
+
+        &-block{
+            @extend .calendar__times-block;
+            color: $color_dark_grey;
+            background-color: rgb(215, 215, 215);
+        }
+    }
+}
