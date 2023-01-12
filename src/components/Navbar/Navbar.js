@@ -22,7 +22,7 @@ function Navbar() {
         </div>
         <div className='navbar__profile'>
           <div className='navbar__profile-option p2'>PROFILE OPTIONS</div>
-          <div className='navbar__profile-icon'><img className='navbar__profile-icon-img' scr={userProfile}/></div>
+          <div className='navbar__profile-icon'><img className='navbar__profile-icon-img' scr={userProfile} alt="user profile stamp"/></div>
           <img className='navbar__seven-shifts-logo' src={sevenShiftsLogo} alt='seven shifts logo'/>
         </div>
       </div>
