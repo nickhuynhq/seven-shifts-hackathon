@@ -18,18 +18,18 @@ function ConfirmModal({setConfirmationModal}) {
         </div>
         <div className='modal__description'>
           <div className='modal__employee'>
-            <img className='modal__icon' src={profileIcon} />
+            <img className='modal__icon' src={profileIcon} alt='profile'/>
             <div className='modal__employee-name'>Sarah Martin</div>
           </div>
           <div className='modal__time'>
-            <img className='modal__icon' src={timeIcon} />
+            <img className='modal__icon' src={timeIcon} alt='time'/>
             <div className='modal__when'>
               <div className='modal__when-title'>Date and Time</div>
               <div className='modal__when-moment'>August 21, 9:30 AM</div>
             </div>
           </div>
           <div className='modal__request'>
-            <img className='modal__icon' src={noteIcon} />
+            <img className='modal__icon' src={noteIcon} alt='note'/>
             <div className='modal__info'>
               <div className='modal__info-title'>Request Details</div>
               <div className='modal__info-text'>...I’d like the chance to potentially grow my career opportunities here by training myself in different areas.</div>

@@ -26,7 +26,7 @@ const CalendarModal = () => {
      <div className="calendar-modal-main">
       <div className="calendar-modal">
         <section className="calendar-modal__employee-card">
-          <img className="employee-card__image" src={ProfilePic} alt="employee image"/>
+          <img className="employee-card__image" src={ProfilePic} alt="employee"/>
           <div className="employee-card__details">
               <h2>Sarah Martin</h2>
               <p>Server</p>
