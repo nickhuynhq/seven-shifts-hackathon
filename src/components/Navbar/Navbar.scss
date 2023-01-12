@@ -1,0 +1,67 @@
+@use '../../styles/partials/colors' as *;
+
+.navbar {
+  border-bottom: 1px solid;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__restaurant {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+
+    &-logo {
+      height: 2rem;
+    }
+
+    &-name {
+      margin-left: .5rem;
+    }
+  }
+
+  &__links {
+    width: 615px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__items {
+    margin: 0 1rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    &-options {
+      margin: 0 1rem;
+    }
+
+    &-icon {
+      // background-color: grey;
+      background-image: url('../../assets/images/user.png');
+      background-size: 100%;
+      height: 2.25rem;
+      width: 2.25rem;
+      border-radius: 50%;
+      margin: 0 1rem;
+    }
+  }
+
+  &__seven-shifts-logo {
+    width: 100px;
+  }
+}
+
+a.active {
+  padding-bottom: 1.3rem;
+  border-bottom: 4px solid;
+  color: $color_tangerine;
+}

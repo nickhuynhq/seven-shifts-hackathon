@@ -1,0 +1,54 @@
+@use './colors.scss' as *;
+
+$font-stack: 'Avenir';
+
+// Light
+@font-face {
+  font-family: $font-stack;
+  src: url(../../assets/fonts/avenir/Avenir-Roman.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Roman.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Roman.ttf) format("truetype");
+  font-weight: 300;
+}
+
+// Normal
+@font-face {
+  font-family: $font-stack;
+  src: url(../../assets/fonts/avenir/Avenir-Medium.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Medium.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Medium.ttf) format("truetype");
+  font-weight: 400;
+}
+
+// Heavy
+@font-face {
+  font-family: $font-stack;
+  src: url(../../assets/fonts/avenir/Avenir-Heavy.woff2) format("woff2"),
+    url(../../assets/fonts/avenir/Avenir-Heavy.woff) format("woff"),
+    url(../../assets/fonts/avenir/Avenir-Heavy.ttf) format("truetype");
+  font-weight: 700;
+}
+
+h1 {
+  font-family: $font-stack;
+  font-weight: 700;
+  font-size: 20px;
+  color: $color_dark_grey;
+}
+
+.p1 .btn {
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 14px;
+  color: $color_dark_grey;
+}
+.p2 {
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 13px;
+  color: $color_dark_grey;
+}
+
+a, a:active {
+  color: $color_dark_grey;
+}

@@ -1,0 +1,120 @@
+@use '../../styles/partials/typography' as *; 
+@use '../../styles/partials/colors' as *; 
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    padding: 16px 0 ;
+  }
+}
+
+.graphs {
+  &__graph {
+    width: 746px;
+  }
+}
+
+.requests {
+  display: flex;
+  flex-direction: column;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 18px;
+  }
+
+  &__title {
+    align-self: flex-start;
+  }
+
+  &__selection {
+    &-option {
+      color: $color_dark_grey;
+      margin-right: .5rem;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  border: 2px solid rgba($color: $color_dark_grey, $alpha: .5);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba($color: $color_dark_grey, $alpha: .5);
+
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba($color: $color_eggplant, $alpha: .5);
+    }
+    &:hover .btn {
+      background-color: $color_eggplant;
+    }
+  }
+
+  &__icon {
+    height: 52px;
+    width: 52px;
+    margin-right: 2rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__who-when {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__who {
+    width: 150px;
+    font-weight: 700;
+  }
+
+  &__description {
+    color: $color_dark_grey;
+  }
+
+  &__button {
+    background-color: $color_eggplant_light;
+    color: $color_white;
+    padding: 8px 14px;
+    margin-left: auto;
+    border-radius: 8px;
+  }
+}
