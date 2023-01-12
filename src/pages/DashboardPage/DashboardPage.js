@@ -7,14 +7,11 @@ import employee4 from '../../assets/images/employee4.png';
 import employee5 from '../../assets/images/employee5.png';
 import downArrow from '../../assets/icons/png/vector.png';
 import { useState} from 'react';
-import { useNavigate } from 'react-router-dom'
 import CalendarModal from '../../components/CalendarModal/CalendarModal';
 
 function DashboardPage() {
 
   const [modalActive, setModalActive] = useState(false);
-
-  const navigate = useNavigate()
 
   const staffList = [
     {
@@ -51,7 +48,6 @@ function DashboardPage() {
 
   const handleClick = () => {
     setModalActive(true);
-    // navigate('/skillbuilding')
   }
 
   return (
@@ -78,7 +74,7 @@ function DashboardPage() {
             {staffList.map((staff) => {
               return (
                 <div className='cards__container'>
-                  <img className='cards__icon' src={staff.request_icon} alt='staff image' />
+                  <img className='cards__icon' src={staff.request_icon} alt='staff' />
                   <div className='cards__info'>
                     <div className='cards__who-when'>
                       <div className='cards__who'>{staff.request_employee}</div>
